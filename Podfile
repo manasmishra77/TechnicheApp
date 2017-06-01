@@ -6,7 +6,6 @@ target 'TechNiche' do
   use_frameworks!
 
   # Pods for TechNiche
-pod 'MBProgressHUD', '~> 1.0.0'
 
   target 'TechNicheTests' do
     inherit! :search_paths

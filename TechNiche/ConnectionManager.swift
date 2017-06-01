@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MBProgressHUD
 
 class ConnectionManager: NSObject
 {
@@ -101,6 +100,7 @@ class ConnectionManager: NSObject
             
             let appDel:AppDelegate = UIApplication.shared.delegate as! AppDelegate
             if showProgressView{
+                /*
                 DispatchQueue.main.async {
                     let spinnerActivity = MBProgressHUD.showAdded(to: appDel.window!, animated: true);
                     spinnerActivity.label.text = "Loading"
@@ -111,6 +111,7 @@ class ConnectionManager: NSObject
                     spinnerActivity.isUserInteractionEnabled = false
                     
                 }
+                 */
             }
             let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
     
