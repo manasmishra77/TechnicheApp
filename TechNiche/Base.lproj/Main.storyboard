@@ -24,6 +24,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="w0z-Oc-BRX">
                                 <rect key="frame" x="8" y="126" width="359" height="477"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SectionHeaderTableViewCell" rowHeight="58" id="iHe-xS-Wcp" customClass="SectionHeaderTableViewCell" customModule="TechNiche" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="359" height="58"/>
@@ -63,11 +64,11 @@
                                             <outlet property="title" destination="kIq-wY-dou" id="qAx-gn-p2l"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" id="BRY-UG-q5m" customClass="ItemTableViewCell" customModule="TechNiche" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" id="BRY-UG-q5m" customClass="ItemTableViewCell" customModule="TechNiche" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="59" width="359" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BRY-UG-q5m" id="Nzw-nc-9nh">
-                                            <rect key="frame" x="0.0" y="0.0" width="359" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWE-uk-Yye">
@@ -149,6 +150,7 @@
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="GWE-uk-Yye" firstAttribute="leading" secondItem="Nzw-nc-9nh" secondAttribute="leading" id="7Qd-3u-O9F"/>
                                                 <constraint firstItem="GWE-uk-Yye" firstAttribute="top" secondItem="Nzw-nc-9nh" secondAttribute="top" constant="5" id="XlI-jx-3qz"/>
@@ -305,11 +307,11 @@
                                 <rect key="frame" x="8" y="64" width="359" height="331"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartCell" rowHeight="139" id="uAx-g2-zRj" customClass="ItemTableViewCell" customModule="TechNiche" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CartCell" rowHeight="139" id="uAx-g2-zRj" customClass="ItemTableViewCell" customModule="TechNiche" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="359" height="139"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uAx-g2-zRj" id="2du-O6-tx0">
-                                            <rect key="frame" x="0.0" y="0.0" width="359" height="139"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="138.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uS-Zr-clK">
@@ -379,6 +381,7 @@
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="mIR-rQ-ojb" firstAttribute="leading" secondItem="0uS-Zr-clK" secondAttribute="leading" id="12u-tM-PcP"/>
                                                         <constraint firstItem="Xtb-po-Exj" firstAttribute="top" secondItem="hAN-5W-aKv" secondAttribute="bottom" constant="15" id="3G2-ya-jxS"/>
