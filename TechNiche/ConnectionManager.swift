@@ -98,21 +98,7 @@ class ConnectionManager: NSObject
             }
             request.timeoutInterval = 20.0
             
-            let appDel:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-            if showProgressView{
-                /*
-                DispatchQueue.main.async {
-                    let spinnerActivity = MBProgressHUD.showAdded(to: appDel.window!, animated: true);
-                    spinnerActivity.label.text = "Loading"
-                    spinnerActivity.label.textColor =  UIColor.white
-                    spinnerActivity.bezelView.color = UIColor(hex: 0xD0EA94, alpha: 0.6)
-                    spinnerActivity.detailsLabel.text = "Please Wait!!"
-                    spinnerActivity.detailsLabel.textColor =  UIColor.white
-                    spinnerActivity.isUserInteractionEnabled = false
-                    
-                }
-                 */
-            }
+            
             let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
     
                 if let response = response as? HTTPURLResponse
@@ -121,7 +107,7 @@ class ConnectionManager: NSObject
                     {
                         completionHandler(response.statusCode, "" as AnyObject)
                         DispatchQueue.main.async {
-                            MBProgressHUD.hideAllHUDs(for: appDel.window!, animated: true)
+                            //MBProgressHUD.hideAllHUDs(for: appDel.window!, animated: true)
                         }
                     
                         return
@@ -142,23 +128,7 @@ class ConnectionManager: NSObject
                                             
                                         {
                                             completionHandler(response.statusCode, jsonResponse as Any)
-                                            /*
-                                            if let responseData = jsonResponse["data"]
-                                            {
-                                                //print(responseData)
-                                                
-                                               
-                                                    if let jsonDictionary = responseData as? AnyObject
-                                                    {
-                                                        completionHandler(response.statusCode, jsonDictionary as AnyObject)
-                                                    }
-                                            }
-                                
-                                            else
-                                            {
-                                                completionHandler(response.statusCode, jsonResponse["error"] as AnyObject)
-                                            }
-                                            */
+                                          
                                         }
                                 }catch
                                     {
@@ -178,16 +148,10 @@ class ConnectionManager: NSObject
                                 }
                             }
                         }
-                        if(showProgressView){
-                        DispatchQueue.main.async {
-                            MBProgressHUD.hideAllHUDs(for: appDel.window!, animated: true) }
-                        }
-                    }
+                 }
                 }
-                if(showProgressView){
-                DispatchQueue.main.async {
-                    MBProgressHUD.hideAllHUDs(for: appDel.window!, animated: true)
-                    }}})
+            }
+            )
             task.resume()
         }
     }
